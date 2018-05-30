@@ -1,18 +1,24 @@
 //
 //  ViewController.swift
-//  trial 3
+//  SOLTA @ CKSS
 //
-//  Created by Guest User on 2018-05-20.
-//  Copyright © 2018 Guest User. All rights reserved.
+//  Created by DeanLouizos on 2018-05-20.
+//
 //
 
 import UIKit
+import GLKit
+import AVFoundation
+import CoreMotion
+import CoreGraphics
 
-class ViewController: UIViewController {
 
+class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //Imaging.helper.glView = 
     }
     
     override func didReceiveMemoryWarning() {

@@ -5,8 +5,8 @@
 //  Created by Guest User on 2018-05-20.
 //  Copyright © 2018 Guest User. All rights reserved.
 //
-
 import UIKit
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        //Configure Firebase
+        FirebaseApp.configure()
         return true
     }
 
