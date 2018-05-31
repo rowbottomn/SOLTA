@@ -8,28 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		2D90386D571AF2951C4C50E6 /* Pods_trial_3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B574E680A3E91938ADED7899 /* Pods_trial_3.framework */; };
+		456B082820C04B9C00708985 /* FirebaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456B082720C04B9C00708985 /* FirebaseHelper.swift */; };
 		4591947320BDB2F000263A55 /* Imaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4591947220BDB2F000263A55 /* Imaging.swift */; };
-		4591947520BDBD1600263A55 /* Testing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4591947420BDBD1600263A55 /* Testing.storyboard */; };
 		4591947720BDC59700263A55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4591947620BDC59700263A55 /* Main.storyboard */; };
 		4591947920BDC62000263A55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4591947820BDC62000263A55 /* LaunchScreen.storyboard */; };
 		4591947B20BEC82600263A55 /* LoginHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4591947A20BEC82600263A55 /* LoginHelper.swift */; };
 		4591947D20BEF92A00263A55 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4591947C20BEF90500263A55 /* GoogleService-Info.plist */; };
 		4591947F20BEFB2C00263A55 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4591947E20BEFB2B00263A55 /* LoginVC.swift */; };
 		45C66E0420BF0EF200A0A04A /* SetNameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C66E0320BF0EF200A0A04A /* SetNameVC.swift */; };
+		45C66E0620BF233100A0A04A /* InfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C66E0520BF233100A0A04A /* InfoVC.swift */; };
 		AC3474BE20B1BDC40053EAC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3474BD20B1BDC40053EAC3 /* AppDelegate.swift */; };
 		AC3474C020B1BDC40053EAC3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3474BF20B1BDC40053EAC3 /* ViewController.swift */; };
 		AC3474C520B1BDC40053EAC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC3474C420B1BDC40053EAC3 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		456B082720C04B9C00708985 /* FirebaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseHelper.swift; sourceTree = "<group>"; };
 		4591947220BDB2F000263A55 /* Imaging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Imaging.swift; sourceTree = "<group>"; };
-		4591947420BDBD1600263A55 /* Testing.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Testing.storyboard; sourceTree = "<group>"; };
 		4591947620BDC59700263A55 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4591947820BDC62000263A55 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4591947A20BEC82600263A55 /* LoginHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginHelper.swift; sourceTree = "<group>"; };
 		4591947C20BEF90500263A55 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4591947E20BEFB2B00263A55 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		45C66E0320BF0EF200A0A04A /* SetNameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetNameVC.swift; sourceTree = "<group>"; };
+		45C66E0520BF233100A0A04A /* InfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoVC.swift; sourceTree = "<group>"; };
 		AC3474BA20B1BDC40053EAC3 /* trial 3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "trial 3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC3474BD20B1BDC40053EAC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC3474BF20B1BDC40053EAC3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -95,11 +97,12 @@
 				4591947620BDC59700263A55 /* Main.storyboard */,
 				4591947820BDC62000263A55 /* LaunchScreen.storyboard */,
 				4591947220BDB2F000263A55 /* Imaging.swift */,
+				45C66E0520BF233100A0A04A /* InfoVC.swift */,
 				4591947A20BEC82600263A55 /* LoginHelper.swift */,
+				456B082720C04B9C00708985 /* FirebaseHelper.swift */,
 				45C66E0320BF0EF200A0A04A /* SetNameVC.swift */,
 				4591947E20BEFB2B00263A55 /* LoginVC.swift */,
 				4591947C20BEF90500263A55 /* GoogleService-Info.plist */,
-				4591947420BDBD1600263A55 /* Testing.storyboard */,
 				AC3474C420B1BDC40053EAC3 /* Assets.xcassets */,
 				AC3474C920B1BDC40053EAC3 /* Info.plist */,
 			);
@@ -171,7 +174,6 @@
 				4591947D20BEF92A00263A55 /* GoogleService-Info.plist in Resources */,
 				AC3474C520B1BDC40053EAC3 /* Assets.xcassets in Resources */,
 				4591947920BDC62000263A55 /* LaunchScreen.storyboard in Resources */,
-				4591947520BDBD1600263A55 /* Testing.storyboard in Resources */,
 				4591947720BDC59700263A55 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,10 +250,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				456B082820C04B9C00708985 /* FirebaseHelper.swift in Sources */,
 				AC3474C020B1BDC40053EAC3 /* ViewController.swift in Sources */,
 				4591947B20BEC82600263A55 /* LoginHelper.swift in Sources */,
 				4591947320BDB2F000263A55 /* Imaging.swift in Sources */,
 				AC3474BE20B1BDC40053EAC3 /* AppDelegate.swift in Sources */,
+				45C66E0620BF233100A0A04A /* InfoVC.swift in Sources */,
 				45C66E0420BF0EF200A0A04A /* SetNameVC.swift in Sources */,
 				4591947F20BEFB2C00263A55 /* LoginVC.swift in Sources */,
 			);
@@ -377,7 +381,7 @@
 				INFOPLIST_FILE = "trial 3/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ca.hdsb.ckss.solta;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.cksscientificoutreachsociety.solta;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -394,7 +398,7 @@
 				INFOPLIST_FILE = "trial 3/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ca.hdsb.ckss.solta;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.cksscientificoutreachsociety.solta;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

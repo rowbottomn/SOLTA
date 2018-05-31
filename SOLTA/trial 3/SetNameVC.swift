@@ -12,11 +12,14 @@ class SetNameVC: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var tf_UserName: UITextField!
     
-    var username : String = LoginHelper.helper.user?.profile.givenName
+    var username : String = (LoginHelper.helper.user?.profile.givenName)!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tf_UserName.delegate = self
+        print("User logged in is : \(username)")
+        tf_UserName.text = username
+        tf_UserName.isUserInteractionEnabled = false
         // Do any additional setup after loading the view.
     }
 
@@ -25,9 +28,9 @@ class SetNameVC: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    override func textFieldDidEndEditing(_ textField: UITextField, reason: UITextFieldDidEndEditingReason) {
+   // func textFieldDidEndEditing(_ textField: UITextField, reason: UITextFieldDidEndEditingReason) {
        // tf_UserName.resignFirstResponder()
-        resignFirstResponder()
-    }
+   //     resignFirstResponder()
+   // }
     
 }

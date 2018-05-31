@@ -8,14 +8,19 @@
 
 import UIKit
 import GoogleSignIn
+import Firebase
 
-class LoginVC: UIViewController, GIDSignInDelegate {
+class LoginVC: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
     
     
+    @IBOutlet weak var b_SignIn: UIButton!
     
-    @IBAction func googleLoginDidTapped(_ sender: Any) {
+    @IBAction func googleSignInDidTap(_ sender: UIButton) {
+   
         print("login google did tapped")
         
+        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
+ 
         if (GIDSignIn.sharedInstance().currentUser == nil){
             print("No user logged in yet")
             GIDSignIn.sharedInstance().signIn()
@@ -25,22 +30,12 @@ class LoginVC: UIViewController, GIDSignInDelegate {
             
             GIDSignIn.sharedInstance().signOut()
         }
-        /*   Firebase.Auth.auth().signInAnonymously(completion: {(anonymousUser:User?, error:Error?) in
-         print("Inside callback")
-         if error == nil{
-         print("Success!")
-         print("The userID is \(anonymousUser!.uid)")
-         }
-         else{
-         print(error?.localizedDescription ?? "It was nil? WTF??")
-         }
-         
-         } as AuthResultCallback)*/
+    
         
     }
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-        print(user.authentication)
+       // print(user.authentication)
         LoginHelper.helper.loginWithGoogle(auth: user.authentication)
     }
     
@@ -48,8 +43,18 @@ class LoginVC: UIViewController, GIDSignInDelegate {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        GIDSignIn.sharedInstance().delegate = self
+        GIDSignIn.sharedInstance().uiDelegate = self
     }
 
+    func sign(_ signIn: GIDSignIn!, present viewController: UIViewController!) {
+        
+    }
+    
+    func sign(_ signIn: GIDSignIn!, dismiss viewController: UIViewController!) {
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

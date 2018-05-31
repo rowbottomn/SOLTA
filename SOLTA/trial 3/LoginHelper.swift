@@ -17,9 +17,12 @@ class LoginHelper{
     var user = GIDSignIn.sharedInstance().currentUser
     
     func loginWithGoogle(auth : GIDAuthentication)  {
-        let credential = GoogleAuthProvider.credential(withIDToken: auth.idToken, accessToken: auth.accessToken)
+        let credential =
+            
+            GoogleAuthProvider.credential(withIDToken: auth.idToken, accessToken: auth.accessToken)
         
-        Firebase.Auth.auth().signIn(with: credential, completion: {(user : User?, error : Error?)
+        user = GIDSignIn.sharedInstance().currentUser
+        Auth.auth().signIn(with: credential, completion: {(user : User?, error : Error?)
             in
             if error != nil {
                 print(error!.localizedDescription)
@@ -28,21 +31,21 @@ class LoginHelper{
             else {
                 print(user!.email?.debugDescription ?? "No user I guess")
                 print(user!.displayName?.debugDescription ?? "Noah Boddy")
-                self.switchToNavigationVC()
+                self.switchToSetUserName()
             }
         })
     }
     
-    private func switchToNavigationVC(){
+    private func switchToSetUserName(){
         let storyboard = UIStoryboard(name : "Main", bundle: nil)
         
-        let naviVC = storyboard.instantiateViewController(withIdentifier: "SetNameVC") as! UINavigationController
+        let nextVC = storyboard.instantiateViewController(withIdentifier: "SetNameVC") as! SetNameVC
         
         //get the appdelegate
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         
-        //set NAvigation controller as root view controller
-        appDelegate.window?.rootViewController = naviVC
+        appDelegate.window?.rootViewController?.present(nextVC, animated:true, completion:nil)
+        
     }
     
     func logOut(){
