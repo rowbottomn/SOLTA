@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2D90386D571AF2951C4C50E6 /* Pods_trial_3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B574E680A3E91938ADED7899 /* Pods_trial_3.framework */; };
 		456B082820C04B9C00708985 /* FirebaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456B082720C04B9C00708985 /* FirebaseHelper.swift */; };
+		456B082A20C057D500708985 /* DetectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456B082920C057D500708985 /* DetectionVC.swift */; };
 		4591947320BDB2F000263A55 /* Imaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4591947220BDB2F000263A55 /* Imaging.swift */; };
 		4591947720BDC59700263A55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4591947620BDC59700263A55 /* Main.storyboard */; };
 		4591947920BDC62000263A55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4591947820BDC62000263A55 /* LaunchScreen.storyboard */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		456B082720C04B9C00708985 /* FirebaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseHelper.swift; sourceTree = "<group>"; };
+		456B082920C057D500708985 /* DetectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectionVC.swift; sourceTree = "<group>"; };
 		4591947220BDB2F000263A55 /* Imaging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Imaging.swift; sourceTree = "<group>"; };
 		4591947620BDC59700263A55 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4591947820BDC62000263A55 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				45C66E0520BF233100A0A04A /* InfoVC.swift */,
 				4591947A20BEC82600263A55 /* LoginHelper.swift */,
 				456B082720C04B9C00708985 /* FirebaseHelper.swift */,
+				456B082920C057D500708985 /* DetectionVC.swift */,
 				45C66E0320BF0EF200A0A04A /* SetNameVC.swift */,
 				4591947E20BEFB2B00263A55 /* LoginVC.swift */,
 				4591947C20BEF90500263A55 /* GoogleService-Info.plist */,
@@ -188,17 +191,29 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-trial 3/Pods-trial 3-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -258,6 +273,7 @@
 				45C66E0620BF233100A0A04A /* InfoVC.swift in Sources */,
 				45C66E0420BF0EF200A0A04A /* SetNameVC.swift in Sources */,
 				4591947F20BEFB2C00263A55 /* LoginVC.swift in Sources */,
+				456B082A20C057D500708985 /* DetectionVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

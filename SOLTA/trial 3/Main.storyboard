@@ -482,6 +482,7 @@
                                 <constraints>
                                     <constraint firstItem="eRQ-vf-cOP" firstAttribute="centerX" secondItem="vOk-ZA-RKV" secondAttribute="centerX" id="2Wi-pw-DqH"/>
                                     <constraint firstItem="eRQ-vf-cOP" firstAttribute="leading" secondItem="vOk-ZA-RKV" secondAttribute="leading" id="S7d-m9-8WZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="eRQ-vf-cOP" secondAttribute="trailing" id="hWS-1M-Bf2"/>
                                     <constraint firstAttribute="height" constant="60" id="iag-sG-zXe"/>
                                     <constraint firstItem="eRQ-vf-cOP" firstAttribute="centerY" secondItem="vOk-ZA-RKV" secondAttribute="centerY" id="lCR-86-bBU"/>
                                 </constraints>
@@ -507,6 +508,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.96037596459999997" green="0.95615547899999997" blue="0.94251900909999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="wk5-M4-DF7" firstAttribute="leading" secondItem="H25-Y1-3im" secondAttribute="leading" id="0ZM-Xz-bOD"/>
                             <constraint firstItem="bBB-CB-kkz" firstAttribute="top" secondItem="H25-Y1-3im" secondAttribute="top" id="1Rv-l9-L1C"/>
                             <constraint firstItem="bBB-CB-kkz" firstAttribute="leading" secondItem="H25-Y1-3im" secondAttribute="leading" id="3hO-6h-Fmy"/>
                             <constraint firstItem="wk5-M4-DF7" firstAttribute="centerY" secondItem="HIu-XX-FZV" secondAttribute="centerY" id="AZ0-bJ-7Jy"/>
@@ -520,14 +522,17 @@
                             <constraint firstItem="qYW-A5-BFj" firstAttribute="centerY" secondItem="f9t-cS-oMY" secondAttribute="centerY" id="Ohq-a4-Us6"/>
                             <constraint firstItem="f9t-cS-oMY" firstAttribute="top" secondItem="bBB-CB-kkz" secondAttribute="bottom" id="QLZ-C1-vti"/>
                             <constraint firstItem="HIu-XX-FZV" firstAttribute="firstBaseline" secondItem="f9t-cS-oMY" secondAttribute="firstBaseline" id="Vr6-hl-ZaM"/>
+                            <constraint firstItem="qYW-A5-BFj" firstAttribute="width" secondItem="wk5-M4-DF7" secondAttribute="width" id="X4d-hD-vwp"/>
                             <constraint firstItem="H25-Y1-3im" firstAttribute="bottom" secondItem="HIu-XX-FZV" secondAttribute="bottom" id="Z92-qd-e9J"/>
                             <constraint firstItem="f9t-cS-oMY" firstAttribute="leading" secondItem="HIu-XX-FZV" secondAttribute="trailing" id="dJv-Lm-IWc"/>
                             <constraint firstItem="wk5-M4-DF7" firstAttribute="top" secondItem="bBB-CB-kkz" secondAttribute="bottom" constant="9" id="hYd-OR-NSM"/>
+                            <constraint firstItem="vOk-ZA-RKV" firstAttribute="width" secondItem="wk5-M4-DF7" secondAttribute="width" id="i6K-FP-iLo"/>
                             <constraint firstItem="wk5-M4-DF7" firstAttribute="trailing" secondItem="HIu-XX-FZV" secondAttribute="trailing" id="jbW-Ag-AwB"/>
                             <constraint firstItem="H25-Y1-3im" firstAttribute="bottom" secondItem="vOk-ZA-RKV" secondAttribute="bottom" id="jxp-Pg-M14"/>
                             <constraint firstItem="HIu-XX-FZV" firstAttribute="baseline" secondItem="f9t-cS-oMY" secondAttribute="baseline" id="lfi-iP-tAu"/>
                             <constraint firstItem="HIu-XX-FZV" firstAttribute="leading" secondItem="bBB-CB-kkz" secondAttribute="leading" id="niz-Sl-7ng"/>
                             <constraint firstItem="vOk-ZA-RKV" firstAttribute="leading" secondItem="f9t-cS-oMY" secondAttribute="trailing" id="o0F-c6-f31"/>
+                            <constraint firstItem="f9t-cS-oMY" firstAttribute="centerX" secondItem="DBm-du-YI6" secondAttribute="centerX" id="tDt-Th-zIN"/>
                             <constraint firstItem="f9t-cS-oMY" firstAttribute="width" secondItem="HIu-XX-FZV" secondAttribute="width" id="xho-n7-aUa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="H25-Y1-3im"/>
@@ -540,10 +545,10 @@
             </objects>
             <point key="canvasLocation" x="2053.5999999999999" y="861.3193403298352"/>
         </scene>
-        <!--View Controller-->
+        <!--DetectionVC-->
         <scene sceneID="Puj-6S-KgT">
             <objects>
-                <viewController storyboardIdentifier="DetectionVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZxG-6i-LQQ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetectionVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZxG-6i-LQQ" customClass="DetectionVC" customModule="trial_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xEl-ee-kcN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -579,6 +584,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="stopCollectingDidTap:" destination="ZxG-6i-LQQ" eventType="touchUpInside" id="PbN-zO-bPi"/>
                                     <segue destination="izc-jp-jZL" kind="show" animates="NO" id="kzg-BS-hN2"/>
                                 </connections>
                             </button>
@@ -607,6 +613,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yWs-Wh-O3L"/>
                     </view>
+                    <connections>
+                        <outlet property="DetectionView" destination="BYb-di-FJm" id="hUf-kx-uOF"/>
+                        <outlet property="b_StopCollecting" destination="AXI-82-VDD" id="hHv-b4-dTB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zig-uB-qWM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -629,6 +639,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="0Qa-WY-ZAr"/>
         <segue reference="oLR-uv-GAM"/>
-        <segue reference="GDD-cx-dGZ"/>
+        <segue reference="e36-XS-JZA"/>
     </inferredMetricsTieBreakers>
 </document>
