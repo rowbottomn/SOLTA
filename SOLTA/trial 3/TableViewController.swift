@@ -7,11 +7,27 @@
 //
 
 import UIKit
+import Firebase;
 
-class TableViewController: ViewController {
 
+class TableViewController: ViewController, UITableViewDelegate, UITableViewDataSource {
+
+  
+    var ref: DatabaseReference!
+    
+    
+    
+    @IBOutlet weak var tableView: UITableView!
+    var detections = [Detection]()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.delegate = self;
+        tableView.dataSource = self
+        tableView.backgroundColor = UIColor(red: 245.0/255.0, green: 244.0/255.0, blue: 240.0/255.0, alpha: 1)
+        detections.append(Detection())
+        detections.append(Detection())
 
         // Do any additional setup after loading the view.
     }
@@ -21,6 +37,30 @@ class TableViewController: ViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return detections.count
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as? TableViewCell
+        cell?.scoreField.text = "Score: "
+        cell?.timeField.text = "Time: "
+        
+    
+        
+//        cell.textLabel?.text = detections[0].date.description
+        
+    
+        
+        return cell!
+    }
+    
+    
+    
+
+    
+
 
     /*
     // MARK: - Navigation
@@ -31,5 +71,9 @@ class TableViewController: ViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
 
 }
+
+
