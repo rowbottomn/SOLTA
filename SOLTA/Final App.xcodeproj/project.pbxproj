@@ -10,7 +10,9 @@
 		2D90386D571AF2951C4C50E6 /* Pods_trial_3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B574E680A3E91938ADED7899 /* Pods_trial_3.framework */; };
 		456B082820C04B9C00708985 /* FirebaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456B082720C04B9C00708985 /* FirebaseHelper.swift */; };
 		456B082A20C057D500708985 /* DetectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456B082920C057D500708985 /* DetectionVC.swift */; };
-		4591947320BDB2F000263A55 /* Imaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4591947220BDB2F000263A55 /* Imaging.swift */; };
+		457096B020C53794006F4D10 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457096AF20C53794006F4D10 /* HistoryTableViewCell.swift */; };
+		457096B220C537F0006F4D10 /* HistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457096B120C537F0006F4D10 /* HistoryVC.swift */; };
+		4591947320BDB2F000263A55 /* DetectionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4591947220BDB2F000263A55 /* DetectionHelper.swift */; };
 		4591947720BDC59700263A55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4591947620BDC59700263A55 /* Main.storyboard */; };
 		4591947920BDC62000263A55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4591947820BDC62000263A55 /* LaunchScreen.storyboard */; };
 		4591947B20BEC82600263A55 /* LoginHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4591947A20BEC82600263A55 /* LoginHelper.swift */; };
@@ -19,14 +21,15 @@
 		45C66E0420BF0EF200A0A04A /* SetNameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C66E0320BF0EF200A0A04A /* SetNameVC.swift */; };
 		45C66E0620BF233100A0A04A /* InfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C66E0520BF233100A0A04A /* InfoVC.swift */; };
 		AC3474BE20B1BDC40053EAC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3474BD20B1BDC40053EAC3 /* AppDelegate.swift */; };
-		AC3474C020B1BDC40053EAC3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3474BF20B1BDC40053EAC3 /* ViewController.swift */; };
 		AC3474C520B1BDC40053EAC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC3474C420B1BDC40053EAC3 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		456B082720C04B9C00708985 /* FirebaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseHelper.swift; sourceTree = "<group>"; };
 		456B082920C057D500708985 /* DetectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectionVC.swift; sourceTree = "<group>"; };
-		4591947220BDB2F000263A55 /* Imaging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Imaging.swift; sourceTree = "<group>"; };
+		457096AF20C53794006F4D10 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
+		457096B120C537F0006F4D10 /* HistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryVC.swift; sourceTree = "<group>"; };
+		4591947220BDB2F000263A55 /* DetectionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectionHelper.swift; sourceTree = "<group>"; };
 		4591947620BDC59700263A55 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4591947820BDC62000263A55 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4591947A20BEC82600263A55 /* LoginHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginHelper.swift; sourceTree = "<group>"; };
@@ -36,7 +39,6 @@
 		45C66E0520BF233100A0A04A /* InfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoVC.swift; sourceTree = "<group>"; };
 		AC3474BA20B1BDC40053EAC3 /* trial 3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "trial 3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC3474BD20B1BDC40053EAC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AC3474BF20B1BDC40053EAC3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AC3474C420B1BDC40053EAC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC3474C920B1BDC40053EAC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AEF5AC21B7F64BA0FCE0C95A /* Pods-trial 3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trial 3.release.xcconfig"; path = "Pods/Target Support Files/Pods-trial 3/Pods-trial 3.release.xcconfig"; sourceTree = "<group>"; };
@@ -95,16 +97,17 @@
 			isa = PBXGroup;
 			children = (
 				AC3474BD20B1BDC40053EAC3 /* AppDelegate.swift */,
-				AC3474BF20B1BDC40053EAC3 /* ViewController.swift */,
 				4591947620BDC59700263A55 /* Main.storyboard */,
-				4591947820BDC62000263A55 /* LaunchScreen.storyboard */,
-				4591947220BDB2F000263A55 /* Imaging.swift */,
-				45C66E0520BF233100A0A04A /* InfoVC.swift */,
-				4591947A20BEC82600263A55 /* LoginHelper.swift */,
-				456B082720C04B9C00708985 /* FirebaseHelper.swift */,
+				457096B120C537F0006F4D10 /* HistoryVC.swift */,
+				457096AF20C53794006F4D10 /* HistoryTableViewCell.swift */,
 				456B082920C057D500708985 /* DetectionVC.swift */,
-				45C66E0320BF0EF200A0A04A /* SetNameVC.swift */,
+				4591947220BDB2F000263A55 /* DetectionHelper.swift */,
+				456B082720C04B9C00708985 /* FirebaseHelper.swift */,
+				45C66E0520BF233100A0A04A /* InfoVC.swift */,
 				4591947E20BEFB2B00263A55 /* LoginVC.swift */,
+				4591947A20BEC82600263A55 /* LoginHelper.swift */,
+				45C66E0320BF0EF200A0A04A /* SetNameVC.swift */,
+				4591947820BDC62000263A55 /* LaunchScreen.storyboard */,
 				4591947C20BEF90500263A55 /* GoogleService-Info.plist */,
 				AC3474C420B1BDC40053EAC3 /* Assets.xcassets */,
 				AC3474C920B1BDC40053EAC3 /* Info.plist */,
@@ -266,12 +269,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				456B082820C04B9C00708985 /* FirebaseHelper.swift in Sources */,
-				AC3474C020B1BDC40053EAC3 /* ViewController.swift in Sources */,
 				4591947B20BEC82600263A55 /* LoginHelper.swift in Sources */,
-				4591947320BDB2F000263A55 /* Imaging.swift in Sources */,
+				457096B220C537F0006F4D10 /* HistoryVC.swift in Sources */,
+				4591947320BDB2F000263A55 /* DetectionHelper.swift in Sources */,
 				AC3474BE20B1BDC40053EAC3 /* AppDelegate.swift in Sources */,
 				45C66E0620BF233100A0A04A /* InfoVC.swift in Sources */,
 				45C66E0420BF0EF200A0A04A /* SetNameVC.swift in Sources */,
+				457096B020C53794006F4D10 /* HistoryTableViewCell.swift in Sources */,
 				4591947F20BEFB2C00263A55 /* LoginVC.swift in Sources */,
 				456B082A20C057D500708985 /* DetectionVC.swift in Sources */,
 			);

@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         //Configure Firebase
         FirebaseApp.configure()
+        Database.database().isPersistenceEnabled = true
         //firestore changes requrie this.
         let db = Firestore.firestore()
         let settings = db.settings

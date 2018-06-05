@@ -69,7 +69,7 @@
 
 - (void)enqueue {
   NSAssert([NSThread isMainThread],
-           @"Upload attempting to execute on non main queue! Please only "
+           @"Up load attempting to execute on non main queue! Please only "
            @"execute this method on the main queue.");
   self.state = FIRStorageTaskStateQueueing;
 
