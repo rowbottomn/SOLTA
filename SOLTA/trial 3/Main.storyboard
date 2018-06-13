@@ -124,6 +124,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="startCollectingDidTap:" destination="TeG-aa-u2c" eventType="touchUpInside" id="0V8-K6-aWD"/>
                                     <segue destination="izc-jp-jZL" kind="presentation" modalTransitionStyle="flipHorizontal" id="GDD-cx-dGZ"/>
                                 </connections>
                             </button>
@@ -705,6 +706,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="0Qa-WY-ZAr"/>
         <segue reference="oLR-uv-GAM"/>
-        <segue reference="vVd-vt-Ces"/>
+        <segue reference="GDD-cx-dGZ"/>
     </inferredMetricsTieBreakers>
 </document>

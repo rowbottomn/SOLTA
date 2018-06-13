@@ -86,7 +86,7 @@ class DetectionHelper{
     var flux : Double = 0
     let targetFlux = 1.0/10.0;
     let detectionMode = DetectionModes.YUV420v
-    var pixelsToSkip : Int = 2
+    var pixelsToSkip : Int = 8
     //moved this to the outside
  //   var scale = UIScreen.main.scale
   //  var newFrame = CGRect(x: 0, y: 0, width: 100, height:100 )//this should be overrode to the frame of the imageview
@@ -330,7 +330,7 @@ class DetectionHelper{
     //use this delegate method to see how many frames get dropped
     func droppedFrame() {
         droppedFrames = droppedFrames + 1
-      //     print("Dropped frames : \(droppedFrames) out of \(numFrames) = \(CGFloat(droppedFrames*100)/CGFloat(numFrames))")
+           print("Dropped frames : \(droppedFrames) out of \(numFrames) = \(CGFloat(droppedFrames*100)/CGFloat(numFrames))")
     }
 
     

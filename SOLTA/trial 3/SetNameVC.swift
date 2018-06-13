@@ -32,5 +32,8 @@ class SetNameVC: UIViewController, UITextFieldDelegate {
        // tf_UserName.resignFirstResponder()
    //     resignFirstResponder()
    // }
+    @IBAction func startCollectingDidTap(_ sender: Any) {
+      //  FirebaseHelper.helper.populateCells()
+    }
     
 }

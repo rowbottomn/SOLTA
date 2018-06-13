@@ -22,8 +22,8 @@ struct Detection {
     var login = ""
     var millis : Double = 0
     var image = UIImage(named: "2ndpage.png")
-    var imageURLString = "2ndpage.png"
-    var imageURL = URL(string: "2ndpage.png")
+    var imageURLString : String? = "2ndpage.png"
+    var imageURL : URL? = URL(string: "2ndpage.png")
     var score = Float32(0)
     var school = "Craig Kielburger Secondary School"
     
@@ -32,14 +32,18 @@ struct Detection {
      */
     init(snapshot: DataSnapshot) {
         let snapshotValue = snapshot.value as! [String: Any]
+       // self.location = snapshotValue["location"] as! CLLocation
         self.score = snapshotValue["score"] as! Float
-        self.dateString = snapshotValue["date"] as! String
-        self.date = getDate(string: dateString)
-        self.imageURLString = snapshotValue["url"] as! String
+        self.school = snapshotValue["school"] as! String
+        self.millis = snapshotValue["millis"] as! Double
+        self.date = Date.init(timeIntervalSince1970: millis)
+        self.dateString = getDate(date: date)
         
-        self.imageURL = URL(string: self.imageURLString)
-        self.image = FirebaseHelper.helper.getImage(url: imageURLString)
-
+        self.imageURLString = snapshotValue["url"] as! String
+        if self.imageURLString != nil {
+            self.imageURL = URL(string: self.imageURLString!)
+            self.image = FirebaseHelper.helper.getImage(url: imageURLString!)
+        }
     }
 
     
@@ -76,8 +80,8 @@ struct Detection {
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss:SSS"
         dateFormatter.timeZone =  TimeZone(secondsFromGMT: -14400)
         dateString = getDate()
-                millis = (date.timeIntervalSince1970)
-        self.login = getLoginFromEmail((user?.email)!)
+        millis = (date.timeIntervalSince1970)
+        login = getLoginFromEmail((user?.email)!)
         //   print("\(user?.displayName!), \(location.coordinate), \(dateFormatter.string(from: date)), \(score)")
     }
     
@@ -93,12 +97,18 @@ struct Detection {
         return dateFormatter.date(from: string)!
     }
     
-    func getLoginFromEmail(_ email:String) -> String {
+   func getLoginFromEmail(_ email:String) -> String {
 
         let temp = user?.email?.description.replacingOccurrences(of: ".", with: "")//repmove any periods
         let parts = temp?.split(separator : "@")
         let login = parts![0].description
         return parts![0].description
+    }
+    
+    static func getLoginFromEmail(_ email:String) -> String {
+        let temp = email.description.replacingOccurrences(of: ".", with: "")//repmove any periods
+        let parts = temp.split(separator : "@")
+        return parts[0].description
     }
     
     mutating func updateURL(string : String){
@@ -133,20 +143,33 @@ class FirebaseHelper{
         detections = [Detection]()
     }
     
+    func getUserRef( user: User) -> DatabaseReference {
+        let login = Detection.getLoginFromEmail(user.email!)
+        return ref.child("users").child("\(login)")
+    }
+    
+    func getStorageRef( user : User) -> StorageReference {
+        let login = Detection.getLoginFromEmail(user.email!)
+        return storageRef.child("users").child("\(login)")
+    }
+    
     func addDetection(detection : Detection){
         var currentDetection = detection
+        
         let login = detection.login
-        userRef = ref.child("\(login)")
-        let userStorageRef = storageRef.child("\(login)")
+        userRef = ref.child("users").child("\(login)")
+        let userStorageRef = storageRef.child("users").child("\(login)")
         let date = detection.getDate()
         let eventRef = userRef.child("\(date)")
         let eventStorageRef = userStorageRef.child("\(date)")
         
         if (detection.image != nil){
-            let imageStorageRef = eventStorageRef.child("\(Int32(detection.score)).png")
-            data = UIImagePNGRepresentation(detection.image!)!
+            let imageStorageRef = eventStorageRef.child("\(Int32(detection.score)).jpg")
+            data = UIImageJPEGRepresentation(detection.image!, 1)!
             let metadata = StorageMetadata()
-            metadata.contentType = "image/png"
+            metadata.contentType = "image/jpg"
+            
+            
             
             _ = imageStorageRef.putData(data, metadata: metadata, completion: { (metadata, error) in
                 guard let metadata = metadata else {
@@ -167,7 +190,7 @@ class FirebaseHelper{
 
             })
         }
-        eventRef.child("millis").setValue(currentDetection.user?.displayName)
+        eventRef.child("millis").setValue(currentDetection.millis)
         eventRef.child("score").setValue( currentDetection.score)
         eventRef.child("school").setValue( currentDetection.school)
         
@@ -186,7 +209,7 @@ class FirebaseHelper{
     
     //not used
     func putImage(image : UIImage){
-        data = UIImagePNGRepresentation(image)!
+        data = UIImageJPEGRepresentation(image, 1)!
 
     }
 
@@ -204,21 +227,7 @@ class FirebaseHelper{
         return image
     }
     
-    func populateCells() {
-        let eventsFromFirebase = [Detection]()
-        let scoreBasedHitsQuery = userRef.observe(.value, with: {(snapShot) in
-            if snapShot.exists(){
-                print(snapShot.children)
-                
-            }
-            
-        })//queryOrdered(byChild: "score")
-            
-       // let test = scoreBasedHitsQuery.dictionaryWithValues(forKeys: ["score","date"])
-       // test.count
-        print("Query Result: \(scoreBasedHitsQuery)")
-        
-    }
+
     
     
     
