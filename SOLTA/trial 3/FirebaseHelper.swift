@@ -125,6 +125,7 @@ class FirebaseHelper{
     static let helper = FirebaseHelper();
    
     //MARK: firebase references
+    let locationManager = CLLocationManager()
     var ref = Database.database().reference()
     let user = Auth.auth().currentUser
    // var docRef : DocumentReference!
@@ -136,7 +137,11 @@ class FirebaseHelper{
     
     var image = UIImage()
     
-    //MARK: class variables
+    func locationInit(){
+        locationManager.requestWhenInUseAuthorization()
+        print("\(locationManager.location.debugDescription)")
+    }
+    
     
    // var docRef = Firestore.firestore().document("D)
     func eraseDetections(){

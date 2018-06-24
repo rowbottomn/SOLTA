@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>To keep track of location of detections for maps</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>To add cosmic rays locally</string>
 	<key>NSPhotoLibraryUsageDescription</key>

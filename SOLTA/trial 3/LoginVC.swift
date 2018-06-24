@@ -37,6 +37,7 @@ class LoginVC: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
        // print(user.authentication)
         LoginHelper.helper.loginWithGoogle(auth: user.authentication)
+        FirebaseHelper.helper.locationInit()
     }
     
     override func viewDidLoad() {

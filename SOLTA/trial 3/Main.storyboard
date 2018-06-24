@@ -425,22 +425,29 @@
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="2ndpage" translatesAutoresizingMaskIntoConstraints="NO" id="Yf6-2u-Kti">
-                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2ndpage" translatesAutoresizingMaskIntoConstraints="NO" id="Yf6-2u-Kti">
+                                                    <rect key="frame" x="0.0" y="0.0" width="102" height="100"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="Yf6-2u-Kti" secondAttribute="height" multiplier="51:50" id="Mrb-td-s5Z"/>
+                                                        <constraint firstAttribute="height" constant="100" id="g6t-HY-5nP"/>
+                                                        <constraint firstAttribute="width" constant="102" id="wpX-dP-FI3"/>
+                                                    </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OmR-GN-ZUi">
-                                                    <rect key="frame" x="108" y="49" width="235" height="50"/>
+                                                    <rect key="frame" x="110" y="49" width="233" height="50"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="235" id="ZqQ-Ke-hxq"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="OGO-yn-W2J"/>
+                                                        <constraint firstAttribute="height" constant="50" id="Ozl-go-izJ"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lDa-QT-ALQ">
-                                                    <rect key="frame" x="108" y="0.0" width="235" height="50"/>
+                                                    <rect key="frame" x="110" y="0.0" width="233" height="50"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="50" id="1YN-7u-xmO"/>
+                                                        <constraint firstAttribute="height" constant="50" id="vvc-kd-b8W"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="xi1-QX-GPH"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -448,14 +455,15 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="lDa-QT-ALQ" secondAttribute="trailing" id="AaR-Tg-H51"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="OmR-GN-ZUi" secondAttribute="bottom" constant="-10" id="AvN-3E-HZW"/>
-                                                <constraint firstItem="OmR-GN-ZUi" firstAttribute="trailing" secondItem="lDa-QT-ALQ" secondAttribute="trailing" id="Bud-gS-Usd"/>
-                                                <constraint firstItem="OmR-GN-ZUi" firstAttribute="leading" secondItem="Yf6-2u-Kti" secondAttribute="trailing" constant="8" id="F73-2b-0x0"/>
-                                                <constraint firstItem="lDa-QT-ALQ" firstAttribute="top" secondItem="nhI-An-Eun" secondAttribute="top" id="Y4I-1m-LSx"/>
-                                                <constraint firstItem="OmR-GN-ZUi" firstAttribute="leading" secondItem="Yf6-2u-Kti" secondAttribute="trailing" constant="8" symbolic="YES" id="cPp-ud-d9d"/>
-                                                <constraint firstItem="OmR-GN-ZUi" firstAttribute="top" secondItem="lDa-QT-ALQ" secondAttribute="bottom" constant="-1" id="f3z-b7-4pq"/>
-                                                <constraint firstItem="lDa-QT-ALQ" firstAttribute="leading" secondItem="Yf6-2u-Kti" secondAttribute="trailing" constant="8" id="nYi-b7-egW"/>
+                                                <constraint firstAttribute="trailing" secondItem="OmR-GN-ZUi" secondAttribute="trailing" id="5Oe-nh-vRV"/>
+                                                <constraint firstItem="Yf6-2u-Kti" firstAttribute="leading" secondItem="nhI-An-Eun" secondAttribute="leading" id="7G1-iL-Msj"/>
+                                                <constraint firstAttribute="bottom" secondItem="Yf6-2u-Kti" secondAttribute="bottom" id="9VM-0c-B7U"/>
+                                                <constraint firstAttribute="trailing" secondItem="lDa-QT-ALQ" secondAttribute="trailing" id="DnF-Aq-6vi"/>
+                                                <constraint firstItem="lDa-QT-ALQ" firstAttribute="leading" secondItem="Yf6-2u-Kti" secondAttribute="trailing" constant="8" id="e4O-ww-0sy"/>
+                                                <constraint firstItem="lDa-QT-ALQ" firstAttribute="top" secondItem="nhI-An-Eun" secondAttribute="top" id="hPc-zu-1h7"/>
+                                                <constraint firstItem="Yf6-2u-Kti" firstAttribute="top" secondItem="nhI-An-Eun" secondAttribute="top" id="vEw-nu-U5I"/>
+                                                <constraint firstItem="OmR-GN-ZUi" firstAttribute="leading" secondItem="Yf6-2u-Kti" secondAttribute="trailing" constant="8" id="xjM-ph-w9W"/>
+                                                <constraint firstAttribute="bottom" secondItem="OmR-GN-ZUi" secondAttribute="bottom" id="xsP-nJ-ePc"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -706,6 +714,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="0Qa-WY-ZAr"/>
         <segue reference="oLR-uv-GAM"/>
-        <segue reference="GDD-cx-dGZ"/>
+        <segue reference="vVd-vt-Ces"/>
     </inferredMetricsTieBreakers>
 </document>
